@@ -1,0 +1,57 @@
+<div id="demo" >    
+    <form name="nabform" class="form-horizontal">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>Posts</legend>
+            <!-- Text input-->
+            <div class="form-group" ng-class="{ 'has-error': nabform.id.$invalid }">
+                <label class="col-md-4 control-label" for="id">Id Post</label>  
+                <div class="col-md-4">
+                    <input id="id" name="id" ng-model="post.id" placeholder="13" class="form-control input-md" ng-disabled="true" type="text" />
+                </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group" ng-class="{ 'has-error': nabform.userId.$invalid }">
+                <label class="col-md-4 control-label" for="userId">Id Usuario</label>  
+                <div class="col-md-4">
+                    <input id="userId" name="userId" ng-model="post.userId" placeholder="42" class="form-control input-md" required="" type="text" />
+                </div>
+            </div>
+
+
+
+
+
+            <!-- Text input-->
+            <div class="form-group" ng-class="{ 'has-error': nabform.title.$invalid }">
+                <label class="col-md-4 control-label" for="title">Titulo</label>  
+                <div class="col-md-4">
+                    <input id="title" name="title" ng-model="post.title" placeholder="El post" class="form-control input-md" required="" type="text" />
+
+                </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group" ng-class="{ 'has-error': nabform.body.$invalid }">
+                <label class="col-md-4 control-label" for="body">Contenido</label>
+                <div class="col-md-4">                     
+                    <textarea class="form-control" id="body" name="body" ng-model="post.body" dummy-control>Este es un post</textarea>
+                </div>
+            </div>
+
+
+            <!-- Button (Double) -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="ok"></label>
+                <div class="col-md-8">
+                    <button id="ok" name="ok" class="btn btn-success" ng-click="save()" ng-disabled="nabform.$invalid">Aceptar</button>
+                    <button id="cancel" name="cancel" class="btn btn-danger" ng-click="cancel()">Cancelar</button>
+                    <button ng-if="location != null" id="remove" name="cancel" class="btn btn-danger" ng-click="delete()">Eliminar</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
+</div>

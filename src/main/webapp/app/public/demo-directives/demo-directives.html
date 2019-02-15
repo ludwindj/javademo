@@ -1,0 +1,39 @@
+<div id="dirdemo">
+    <h1>Los mejores lenguajes de programación de la Galaxia</h1>
+    
+    <p>
+    Estaticos vs dinamicos
+    <button id="alterar" type="button" ng-click="static=!static">Alterar</button>
+    </p>
+    
+    <ul ng-if="static">
+        <li ng-repeat="item in $ctrl.staticjvmlanguages | limitTo:3 " ng-class="" >
+            <mp-directive></mp-directive>
+        </li>
+    </ul>
+    
+    <ul ng-if="!static">
+            <li ng-repeat="item in $ctrl.dynamicjvmlanguages | orderBy:item " ng-bind="item" />
+    </ul>
+    
+    <div>
+        <label>Mi lenguaje preferido es </label>
+        <input id="favlang" type="text" ng-model="$ctrl.favoritelang" placeholder="Java" />
+    </div>
+    
+    <div id="mensaje">Que bueno que te gusta <div ng-bind="$ctrl.favoritelang"></div></div>
+    
+    
+    <div ng-switch on="$ctrl.favoritelang">
+        <div ng-switch-when="Java">
+            <img src="https://i.ytimg.com/vi/pzUzSypE010/maxresdefault.jpg" width="256" />
+         
+        </div>
+        <div ng-switch-when="C#">
+            <img src="https://i.pinimg.com/736x/02/eb/0a/02eb0a01c39b4b07de7f3aa6a081ef5c--survival-instinct-like-you.jpg" width="256" />
+        </div>
+        <div ng-switch-when="JavaScript">
+            <img src="https://qph.ec.quoracdn.net/main-qimg-b8355a88a53e75f581bd8870a6dc03d5-c" width="256" />
+        </div>
+      </div>
+</div>

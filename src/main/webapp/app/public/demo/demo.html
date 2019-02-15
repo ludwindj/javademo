@@ -1,0 +1,24 @@
+<div id="demo">
+    <h1>Demo angular JS</h1>
+    <input id="simpleText" type="text" ng-model="$ctrl.simpleModel" placeholder="Hola mundo" />
+    <h1>{{$ctrl.simpleModel}}</h1>
+    <h1 ng-bind="$ctrl.simpleModel"></h1>
+
+    <hr>
+    <h1>Datos dev</h1>
+
+    <button type="button" ng-click="$ctrl.setModel()">Cargar Datos</button>
+    <div>
+        <label>Ingrese comentario </label>
+        <input type="text" ng-model="$ctrl.dev.comentario" placeholder="Comentario" />
+    </div>
+    <div>
+        <label>Nombre </label> {{$ctrl.dev.name}}
+    </div>
+    <div>
+        <label>Email </label> {{$ctrl.dev.email}}
+    </div>
+    <div>
+        <label>Comentario </label> {{$ctrl.dev.comentario}}
+    </div>
+</div>

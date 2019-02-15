@@ -1,0 +1,28 @@
+<div id="demo">
+	Promesas
+
+	<button id="promise" name="promise" class="btn btn-success"
+		ng-click="$ctrl.testPromise()">Promesa</button>
+
+	<div>{{$ctrl.hello}}</div>
+	<br />
+	<div>{{$ctrl.serverHello}}</div>
+	<br />
+	<hr />
+    <div>
+        <table class="table">
+            <tr>
+                <th>Id</th>
+                <th>Usuario</th>
+                <th>Titulo</th>
+                <th>Contenido</th>
+            </tr>
+            <tr ng-repeat="p in $ctrl.posts">
+                <td> <a ng-href="#!/update-post/{{p.id}}">{{p.id}}</a></td>
+                <td>{{p.userId}}</td>
+                <td>{{p.title}}</td>
+                <td>{{p.body}}</td>
+            </tr>
+        </table>
+    </div> 
+</div>
